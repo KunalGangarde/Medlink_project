@@ -13,11 +13,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+
 // use the sign up and login routes
 app.use(signupRoutes);
 app.use(loginRoutes);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3049;
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);

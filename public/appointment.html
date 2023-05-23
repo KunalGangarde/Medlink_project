@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Appointment Scheduling</title>
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    /* Page Layout */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+    }
+    
+    .section {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      margin-right: 20px;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .section:last-child {
+      margin-right: 0;
+    }
+    
+    .section h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    select,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+      
+      .section {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>Schedule an Appointment</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="doctor">Doctor's Name:</label>
+        <input type="text" id="doctor" name="doctor" required>
+        
+        <label for="speciality">Speciality:</label>
+        <input type="text" id="speciality" name="speciality" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="hospital">Hospital:</label>
+        <input type="text" id="hospital" name="hospital" required>
+        
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" required>
+        
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" required>
+        
+        <label for="reason">Reason:</label>
+        <select id="reason" name="reason" required>
+          <option value="">Select a reason</option>
+          <option value="pain">Pain</option>
+          <option value="injury">Injury</option>
+          <option value="checkup">Regular Check-up</option>
+          <option value="consultation">Consultation</option>
+        </select>
+        
+        <input type="submit" value="Schedule Appointment">
+      </form>
+    </div>
+    
+    <div class="section">
+      <h2>Emergency Appointment</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="doctor">Doctor's Name:</label>
+        <input type="text" id="doctor" name="doctor" required>
+        
+        <label for="speciality">Speciality:</label>
+        <input type="text" id="speciality" name="speciality" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="hospital">Hospital:</label>
+        <input type="text" id="hospital" name="hospital" required>
+        
+        <label for="reason">Reason:</label>
+        <select id="reason" name="reason" required>
+          <option value="">Select a reason</option>
+          <option value="pain">Pain</option>
+          <option value="injury">Injury</option>
+          <option value="emergency">Emergency</option>
+        </select>
+        
+        <label for="message">Additional Information:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <input type="submit" value="Request Emergency Appointment">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
